@@ -333,7 +333,7 @@ header .container .sections>i:hover {
   left: 1rem;
 }
 
-.hello .scroll-circ {
+.scroll-circ {
   position: absolute;
   bottom: 1rem;
   left: 50%;
@@ -341,7 +341,7 @@ header .container .sections>i:hover {
 
 }
 
-.hello .scroll-circ div {
+.scroll-circ div {
   width: 20px;
   height: 20px;
   margin-left: .5rem;
@@ -542,6 +542,7 @@ header .container .sections>i:hover {
   background-color: var(--mainColor, #19c8fa);
   padding: 1rem;
   border: none;
+  outline: none;
   margin-top: 2rem;
   margin-bottom: 4rem;
 }
@@ -601,6 +602,7 @@ header .container .sections>i:hover {
 /* About Section */
 .about .container {
   overflow: hidden;
+  padding-bottom: 0;
 }
 
 .about .container .img {
@@ -613,7 +615,7 @@ header .container .sections>i:hover {
 
 .about .container .img img {
   position: relative;
-  bottom: -100px;
+  bottom: -140px;
 
   width: 100%;
 }
@@ -622,24 +624,30 @@ header .container .sections>i:hover {
   .about .container .img img {
     bottom: -50px;
   }
+
   .portfolio .video .video-tag {
     height: 50%;
     padding: .5rem;
   }
+
   .portfolio .video .video-tag h3 {
     font-size: 1rem;
     margin-bottom: 1rem;
   }
+
   .portfolio .video .video-tag p {
     margin: 0;
   }
+
   .portfolio .video .video-tag button {
     padding: .2rem;
     margin-top: .5rem;
   }
+
   section .container .title {
     margin: 0;
   }
+
   section .container .title p {
     width: 90%;
   }
@@ -651,17 +659,21 @@ header .container .sections>i:hover {
 .achievements {
   background: url(../images/stats.png);
   height: fit-content;
-  
+
   position: relative;
-  
+
   color: var(--headerColor, #fff);
   z-index: 1;
-  
-  padding: 4rem 2rem;
+
+
+}
+
+.achievements .container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  
+
 }
+
 .achievements::before {
   width: 100%;
   height: 100%;
@@ -680,21 +692,284 @@ header .container .sections>i:hover {
   text-align: center;
 
 }
+
 .achievements .box i {
   padding: 1rem;
   font-size: 1.2rem;
   border-radius: 50%;
   background-color: black;
-  
+
   margin-bottom: 1rem;
 }
+
 .achievements .box p {
   color: var(--headerColor, #fff);
   width: 100%;
 }
+
 .achievements .box p:first-of-type {
-  font-size: 4rem;
+  font-size: 3rem;
   font-weight: bold;
-  
+
   margin-bottom: 1rem;
+}
+
+
+
+
+
+/* * Skills Style Start */
+.skills .container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 5rem;
+}
+
+@media (max-width: 767px) {
+  .skills .container {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
+
+.skills .container div .title-test {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.skills .container div .title-test h4 {
+  font-weight: normal;
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+}
+
+.skills .container div .title-test p {
+  font-size: 1rem;
+  line-height: 2;
+}
+.testimonials-side {
+  position: relative;
+  padding-bottom: 4rem;
+}
+
+.testimonials-side .monials {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  position: relative;
+}
+
+.testimonials-side .monials::after {
+  content: "John Doe, CEO";
+  color: var(--paragraphColor, #777777);
+
+  position: absolute;
+  bottom: .5rem;
+  right: 0;
+  font-size: .9rem;
+}
+
+.testimonials-side .monials img {
+  width: 100px;
+  border-radius: 50%;
+  margin-right: 2rem;
+}
+
+.testimonials-side .monials p {
+  line-height: 1.5;
+  padding: 2rem 0;
+  border-bottom: 2px solid #eee;
+  color: black;
+}
+
+.testimonials-side .scroll-circ {
+  
+}
+.testimonials-side .scroll-circ div {
+  width: 10px;
+  height: 10px;
+}
+
+
+
+.skills-side .skills.scale {}
+
+.skills-side .skills-scale p {
+  color: black;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+.skills-side .skills-scale div {
+  width: 100%;
+  height: 30px;
+  background-color: #eee;
+  margin-bottom: 2rem;
+}
+
+.skills-side .skills-scale div span {
+  height: 100%;
+  width: 50%;
+  background-color: var(--mainColor, #19c8fa);
+  display: block;
+
+  position: relative;
+}
+
+.skills-side .skills-scale div span::before {
+  content: "";
+  border: 10px solid;
+  border-color: black transparent transparent transparent;
+
+  position: absolute;
+  right: -10px;
+  top: -12px;
+}
+.skills-side .skills-scale div span::after {
+  content: attr(data-percentage);
+  
+  position: absolute;
+  top: -35px;
+  right: -18.03px;
+  background-color: black;
+  color: white;
+  padding: .2rem;
+  border-radius: .25rem;
+  z-index: 1;
+}
+
+
+
+
+
+/* * Skills Style End */
+
+/* * Quote Style */
+.quote {
+  background: url(../images/quote.jpg);
+  background-size: cover;
+  
+  position: relative;
+  z-index: 1;
+}
+.quote::before {
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  opacity: .8;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+.images-container {
+  padding-top: 6rem;
+  padding-bottom: 5rem;
+  text-align: center;
+  color: var(--headerColor, #fff);
+justify-content: center;
+}
+.images-container q {
+  width: 100%;
+  margin-bottom: 1rem;
+  display: block;
+  font-size: 1.9rem;
+}
+.images-container p {
+  color: var(--headerColor, #fff);
+}
+/* * Quote Style End */
+
+
+/* * Plans Style Start */
+
+/* * Plans Style End */
+
+.pricing .container {
+
+}
+.pricing .container .plans {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  text-align: center;
+  gap: 2rem
+}
+.pricing .container .plans .plan {
+  background-color: #eee;
+}
+
+.pricing .container .plans .plan .info-1 {
+  padding: 2rem;
+  border-top: 1px solid var(--mainColor, #19c8fa);
+  border-bottom: 1px solid var(--mainColor, #19c8fa);
+
+}
+.pricing .container .plans .plan .info-1 h4 {
+  font-weight: normal;
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+}
+.pricing .container .plans .plan .info-1 span {
+  font-size: 4rem;
+  color: black;
+  font-weight: bold;
+  position: relative;
+}
+.pricing .container .plans .plan .info-1 span::before {
+  content: "$";
+  font-size: 2rem;
+  position: absolute;
+  top: 0;
+  left: -1.5rem;
+}
+.pricing .container .plans .plan .info-1 span::after {
+  content: "/MO";
+  font-size: 2rem;
+  position: absolute;
+  left: 4.5rem;
+  bottom: 0;
+}
+.pricing .container .plans .plan ul {
+  padding: 1rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-bottom: 1px solid var(--mainColor, #19c8fa);
+}
+
+.pricing .container .plans .plan ul li {
+  padding: .5rem .5rem;
+  margin-bottom: 1rem;
+  width: fit-content;
+  border-bottom: 1px solid var(--mainColor, #19c8fa);
+}
+.pricing .container .plans .plan ul li:last-child {
+  border: none
+}
+
+.pricing .container .plans .plan button {
+  padding: .5rem 1rem;
+  border: 1px solid var(--mainColor, #19c8fa);
+  color: black;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.pricing .container .contact-button {
+  margin-top: 2rem;
+  text-align: center;
+}
+.pricing .container .contact-button p {
+  font-size: 1.5rem;
+  color: black;
+  margin-bottom: 1rem;
+}
+.pricing .container .contact-button button {
+  padding: 1rem 2rem;
+  border: none;
+  color: white;
+  background-color: var(--mainColor, #19c8fa);
 }
