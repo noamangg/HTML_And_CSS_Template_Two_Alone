@@ -885,12 +885,6 @@ justify-content: center;
 
 
 /* * Plans Style Start */
-
-/* * Plans Style End */
-
-.pricing .container {
-
-}
 .pricing .container .plans {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
@@ -898,25 +892,25 @@ justify-content: center;
   gap: 2rem
 }
 .pricing .container .plans .plan {
-  background-color: #eee;
+  background-color: rgb(248, 248, 248);
 }
 
 .pricing .container .plans .plan .info-1 {
   padding: 2rem;
   border-top: 1px solid var(--mainColor, #19c8fa);
   border-bottom: 1px solid var(--mainColor, #19c8fa);
-
 }
 .pricing .container .plans .plan .info-1 h4 {
   font-weight: normal;
   font-size: 1.25rem;
   margin-bottom: 1rem;
+
 }
 .pricing .container .plans .plan .info-1 span {
   font-size: 4rem;
   color: black;
-  font-weight: bold;
   position: relative;
+  font-weight: normal;
 }
 .pricing .container .plans .plan .info-1 span::before {
   content: "$";
@@ -963,7 +957,7 @@ justify-content: center;
   text-align: center;
 }
 .pricing .container .contact-button p {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   color: black;
   margin-bottom: 1rem;
 }
@@ -972,4 +966,196 @@ justify-content: center;
   border: none;
   color: white;
   background-color: var(--mainColor, #19c8fa);
+}
+/* * Plans Style End */
+
+
+/* * Email Style */
+.email {
+  background: url(../images/subscribe.jpg);
+  background-size: cover;
+  
+  position: relative;
+  z-index: 1;
+}
+.email::before {
+  width: 100%;
+  height: 100%;
+  opacity: .4;
+  background-color: black;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.email .container {
+  flex-wrap: nowrap;
+  padding: 6rem 0px;
+  
+}
+.email .container form {
+  width: 50%;
+  border: 1px solid white;
+  justify-content: space-between;
+  margin-right: 2rem;
+}
+
+@media (max-width: 991px) {
+  .email .container {
+    flex-direction: column;
+  }
+  .email .container form {
+    width: 90%;
+    margin-bottom: 1rem;
+    align-self: center;
+  }
+}
+.email .container form input[type="email"] {
+  padding:  1.3rem 1rem;
+  background-color: transparent;
+  width: 70%;
+  border: none;
+  outline: none;
+  color: white;
+}
+.email .container form input[type="email"]::placeholder {
+  color: white;
+}
+.email .container form input[type="submit"] {
+  height: inherit;
+  width: 30%;
+  color: var(--headerColor, #fff);
+  text-transform: uppercase;
+  background-color: var(--mainColor, #19c8fa);
+  border: none;
+}
+
+.email .container p {
+  color: var(--headerColor, #fff);
+  line-height: 1.8;
+}
+/* * Email Style End */
+
+
+/* *Contact Section Style */
+
+.contact .container .contact-div {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 4rem;
+}
+
+.contact .container .contact-div form {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(2, auto) 1fr auto;
+  gap: 2rem;
+  width: 100%;
+}
+.contact .container .contact-div form input {
+  padding: 1rem;
+  outline: none;
+  border: 1px solid rgb(197, 197, 197);
+}
+.contact .container .contact-div form textarea {
+  padding: 1rem;
+  border: 1px solid rgb(197, 197, 197);
+  outline: none;
+}
+.contact .container .contact-div form input[type="submit"] {
+  width: fit-content !important;
+  justify-self: end;
+  
+  color: white;
+  background-color: var(--mainColor, #19c8fa);
+}
+
+.contact .container .contact-div .info div {
+  margin-bottom: 4rem;
+  line-height: 1.8;
+}
+.contact .container .contact-div .info div h5 {
+  font-size: 1.2rem;
+  font-weight: normal;
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+}
+.contact .container .contact-div .info .address address {
+  line-height: 1.8;
+  color: var(--paragraphColor, #777777);
+}
+
+@media (max-width: 767px) {
+  .contact .container .contact-div {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 2rem;
+  }
+  
+  .contact .container .contact-div .info {
+    order: -1;
+  }
+  .contact .container .contact-div .info div {
+    margin-bottom: 2rem;
+  }
+  .contact .container .contact-div .info div h5 {
+    margin-bottom: 1rem;
+  }
+
+
+}
+/* *Contact Section End */
+
+
+/* *Footer Styling */
+footer {
+  background: url(../images/subscribe.jpg);
+  background-size: cover;
+  padding: 4rem;
+  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+footer::Before {
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  opacity: .6;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+footer img {
+  margin-bottom: 3rem;
+}
+footer > p:first-of-type {
+  font-size: 1.5rem;
+  padding: 1.5rem;
+  border-bottom: 1px solid var(--headerColor, #fff);
+  text-transform: uppercase;
+  color: var(--headerColor, #fff);
+  margin-bottom: 2rem;
+}
+footer .icons a {
+  color: var(--headerColor, #fff);
+  margin-left: .2rem;
+}
+footer > p:last-child {
+  margin-top: 2rem;
+  font-size: 1.1rem;
+  color: var(--headerColor, #fff);
+}
+footer > p:last-child span {
+  color: var(--mainColor, #19c8fa);
+}
+
+button {
+  cursor: pointer;
 }
